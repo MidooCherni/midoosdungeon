@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midoo's Dungeon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=VT323&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <audio id="musicplayer" loop>
+      <source src="https://files.catbox.moe/z3wn45.mp3">
+    </audio>
+    <div class="viewport">
+      <div class="sidebar">
+        <div class="sidebar-logo"></div>
+        <div class="sidebar-nav"><center>
+          <br><br>
+          <button class="button-active">HOME</button>
+          <button>DUNIA</button>
+          <button>TTRPG</button>
+          <button>WRITINGS</button>
+          <button>GALLERY</button>
+          <button>GITHUB</button>
+        </center></div>
+      </div>
+      <div class="mainpart">
+        <div class="mainpart-banner"><center>
+          <table>
+            <tr>
+              <td><img src="tex/topbar-thunder.gif" class="thunderpic"></td>
+              <td style="vertical-align:bottom;"><h1><i><center>MIDOO's Mellifluous Homepage</center></i></h1></td>
+              <td><img src="tex/topbar-thunder.gif" class="thunderpic"></td>
+            </tr>
+          </table></center>
+          <center><span class="topfont"> . . : [ [ an oasis of <b>BLOOD</b> and <b>THUNDER</b> ] ] : . .</span></center>
+        </div>
+        <div class="mainpart-content">
+          <img class="mainpart-content-rillus" src="tex/WerdnaSNES.png">
+          <div class="mainpart-content-text">
+            <h2>Midoo Cherni </h2><h6><i>(ME-doh SHARE-knee)</i></h6><h5>20th level<span class="codeword"><b> Computer Wizard</b></span></h5><br>
+            <table style="border:0px; padding:5px">
+              <tr><td><b>ORIGIN:</b></td><td></td><td>The Republic of Tunisia</td></tr>
+              <tr><td><b>OCCUPATION:</b></td><td></td><td>Systems Engineer<br>Freelance Game Developer<br>Hobbyist Writer</td></tr>
+              <tr><td><b>EDUCATION:</b></td><td></td><td>Masters, <i>Artificial Intelligence and Industrial Robotics</i> (2025)<br>Bachelors, <i>Software Development</i> (2022)</td></tr>
+              <tr><td><b>LANGUAGES SPOKEN:</b></td><td></td><td>English, Arabic, and French - Fluent<br>Japanese, Spanish - Conversational</td></tr>
+              <tr><td><b>FAV. TOOLS:</b></td><td></td><td>C/C++, Python, GDS, SDL2, OpenGL, Linux Kernel</td></tr>
+              <tr><td><b>FAV. MEDIA:</b></td><td></td><td>Warcraft, Dungeons & Dragons (2e and 3.5e), Homestuck, Touhou, EverQuest (P99), The Elder Scrolls 3: Morrowind</td></tr>
+              <tr><td><b>ROLE:</b></td><td></td><td>Knight of <font color="f0840c">Light</font> - <font color="ff01fe">Derse</font><br>Neutral good - ENFJ-A</td></tr>
+            </table>
+            <hr width="50%" size="1">            
+          </div>
+          <br><br><br><br>
+        </div>
+      </div>
+      <div id="popup" class="overlay">
+        <div class="popup-box">
+          <div class="popup-dialog">SHALL I SUMMON<br>THE ORCHESTRA?</div>
+          <div class="popup-actions">
+            <button class="popup-dialogbutton" onclick="mus_yes()">YAY</button>
+            <button class="popup-dialogbutton" onclick="mus_not()">NAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var mus = document.getElementById('musicplayer');
+      function mus_yes(){ 
+        mus.play();
+        document.getElementById('popup').style.display = 'none';
+      }
+      function mus_not(){ document.getElementById('popup').style.display = 'none'; }
+    </script>
+</body>
+</html>

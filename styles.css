@@ -1,0 +1,239 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-size: 24px;
+  background-image: url("tex/bg.jpg");
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width:100vw;
+  overflow:hidden;
+  color:#ffffff;
+  cursor: url('tex/nelfcursor.png'), auto;
+}
+
+.viewport {
+  height:100vh;
+  display: flex;
+  background-image: url("tex/darkstone.png");
+  position: relative;
+  aspect-ratio: 4 / 3;
+  image-rendering: pixelated;
+}
+
+.sidebar { 
+  width: 20%;
+  height: 100%;
+}
+.sidebar-logo {
+  background-image: url("tex/sidetop.png");
+  background-size: cover;
+  width:100%;
+  aspect-ratio: 88/74;
+}
+.sidebar-nav {
+  background-image: url("tex/sideinfini.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  height: 100%;
+  display:flex;
+}
+button{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  color:#3f3f3f;
+  background:url("tex/btn_base.png");
+  background-size: cover;
+  width: 66%;
+  aspect-ratio:59/21;
+  border:2px black solid;
+  cursor: url('tex/nelfcursor2.png'), auto;
+}
+button:hover{
+  background:url("tex/btn_hover.png");
+  background-size: cover;
+}
+button:active{
+  background:url("tex/btn_clicked.png");
+  background-size: cover;
+}
+.button-active{
+  background:url("tex/btn_clicked.png");
+  background-size: cover;
+}
+.button-active:hover{
+  background:url("tex/btn_clicked.png");
+  background-size: cover;
+}
+.button-active:active{
+  background:url("tex/btn_clicked.png");
+  background-size: cover;
+}
+
+.mainpart {
+  width: 80%;
+  overflow: auto;
+}
+.mainpart-banner {
+  background-image: url("tex/contentbanner.png");
+  background-size: 100%;
+  aspect-ratio: 340 / 85;
+  background-repeat: no-repeat;
+  padding-top:28px;
+}
+.mainpart-content {
+  background-image: url("tex/contentinfini.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  height:fit-content;
+}
+.mainpart-content-text{
+  padding:40px;
+  padding-left:60px;
+}
+.mainpart-content-rillus{
+  float:right;
+  padding-top:50;
+  width:50%;
+  max-width:400px;
+  animation: floateffect 3s ease-in-out infinite;
+}
+
+h1{
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  color: #ffe134; /* gold */
+  font-size: 30;
+}
+.codeword{
+  color:#4bec13;
+  font-family:'Courier New', Consolas;
+  animation: effect 0.5s linear infinite;
+}
+.topfont{
+  color: #dddddd; 
+  font-family:'Courier New', Consolas;
+}
+@keyframes effect {
+  0% { color:#4bec13; }
+  50% { color:#0da13e; }
+  100% { color:#4bec13; }
+}
+@keyframes floateffect{
+  0% { padding-top:50; }
+  50% { padding-top:75; }
+  100% { padding-top:50; }
+}
+
+td{
+  padding-left:10px;
+  padding-bottom:10px;
+  font-size:20px;
+  vertical-align:top;
+}
+
+.overlay{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popup-box{
+  background-image: url("tex/scroll.png");
+  background-size:cover;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-size:54px;
+  padding-top:72px;
+  width: 40%;
+  aspect-ratio: 94/72;
+  color: #000000;
+}
+.popup-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content:center;
+}
+.popup-actions .popup-dialogbutton{
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  width: 25%;
+  aspect-ratio:59/21;
+  background-image: url();
+  background-color: rgba(0, 0, 0, 0.25);
+  color:white;
+  border:4px black solid; 
+  cursor:pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+    /*  MOBILE DESIGN   */
+
+@media screen and (max-width:1199px){
+  html,body{ max-width:100% }
+  .viewport{
+    flex-shrink: 0;
+    transform-origin:center center;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    aspect-ratio: auto;
+  }
+  .sidebar{
+    display:none;
+  }
+  .mainpart{
+    width:100%;
+    overflow-y:auto;
+  }
+  .mainpart-banner {
+    margin-top:15px;
+    padding:3px;
+    padding-top:10px;
+  }
+  .mainpart-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .topfont{ 
+    font-size:10px;
+    margin-bottom:15px;
+  }
+  .thunderpic{ width:42px }
+  h1{ font-size:14px }
+  
+  .popup-box{
+    font-size:54px;
+    padding-top:64px;
+    width: 90%;
+    aspect-ratio: 94/72;
+    color: #000000;
+  }
+
+  td{
+    padding-left:0px;
+    padding-bottom:10px;
+    font-size:12px;
+    vertical-align:top;
+  }
+  .mainpart-content-rillus{
+    margin-top:50px;
+    width:250px;
+  }
+  .mainpart-content-text{
+    margin-bottom:50px;
+  }
+}
